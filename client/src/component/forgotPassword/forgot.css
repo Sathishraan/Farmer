@@ -1,0 +1,94 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Forgot Password container */
+.forgot-container {
+  background: rgb(90, 168, 66);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Header styling */
+.forgot-header {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form styling */
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group (label + input) */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Label styling */
+.form-label {
+  margin-bottom: 0.5rem;
+  color: #666;
+  font-size: 14px;
+  display: block;
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+.error-message {
+  margin-top: 1rem;
+  color: red;
+  text-align: center;
+  font-size: 14px;
+}

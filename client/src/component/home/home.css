@@ -1,0 +1,156 @@
+/* General container styling */
+/* General container styling */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  padding-top: 2880px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden; /* Allow horizontal overflow only if necessary */
+  overflow-y: visible; /* Allow content to overflow vertically */
+  height: auto; /* Ensure the height grows with content */
+  min-height: 100vh; /* Ensure the container takes at least full viewport height */
+}
+
+.bg{
+  color: aliceblue;
+  padding:20px 20px;
+  
+  font-size: 50px;
+
+}
+/* Body and HTML */
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll unless necessary */
+  background-color: #3c4e2f;
+}
+
+
+/* Fullscreen Image */
+.fullscreen-image {
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+  z-index: 10;
+  position: absolute; /* Change this if the image needs to cover the full screen */
+  top: 0; /* Ensure it is positioned at the top */
+  left: 0; /* Ensure it starts from the left side */
+}
+/* Image Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  gap: 20px;
+  width: 100%;
+  margin: 20px auto;
+  padding-top: 0px; /* Align grid properly */
+  overflow-x: visible; /* Prevent horizontal overflow */
+  overflow-y: visible; /* Allow vertical overflow */
+  min-height: 100%; /* Ensure the grid container takes the height based on content */
+}
+
+.grid-item-container {
+  position: relative;
+  height: auto; /* Let the container resize based on content */
+  overflow: visible; /* Ensure content is not cut off */
+}
+
+.grid-item {
+  width: 100%;
+  height: auto; /* Maintain the aspect ratio of the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 10px; /* Optional: add rounded corners */
+}
+
+/* Buy Button styling */
+.buy-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c02525;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect with Shadow */
+.buy-button:hover {
+  background-color: #2bb532;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Large button styling for large image and videos */
+.large-button {
+  bottom: 20px;
+}
+
+/* Video Section Container */
+.video-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Video Styling */
+.product-video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* MEDIA QUERIES */
+
+/* For tablets and smaller desktops */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .fullscreen-image {
+    height: 80vh; /* Ensure the image still occupies significant space */
+  }
+}
+
+/* For larger desktops */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* For small devices like mobile phones */
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item-container {
+    height: auto;
+  }
+}

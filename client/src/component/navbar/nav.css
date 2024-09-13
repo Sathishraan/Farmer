@@ -1,0 +1,84 @@
+/* Navbar styles */
+.navbar {
+  background-color: #3c4e2f;
+  color: #fff;
+  padding: 10px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Ensure logo is on the left and links on the right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:0 305px; /* Adjust padding as necessary */
+}
+
+/* Logo styles */
+.logo {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: left;
+ 
+ 
+}
+
+/* Navbar links */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Cart icon styles */
+.cart-icon {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.cart-icon:hover {
+  color: #ffdf00; /* Change cart icon color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}
