@@ -1,0 +1,71 @@
+/* Container for the chat list */
+.chat-list-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the chat list */
+.chat-list-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Styling for the list of connected users */
+.connected-users-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Each user item in the list */
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.user-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* User name in the chat list */
+.user-item p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #555;
+}
+
+/* Message button */
+.message-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-btn:hover {
+    background-color: #45a049;
+}
+
+/* No connected users message */
+.chat-list-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #888;
+}

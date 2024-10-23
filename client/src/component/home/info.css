@@ -40,11 +40,30 @@
     .info-section {
         flex-direction: column;
         align-items: center;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .info-item {
+        padding: 10px 20px; /* Reduce padding for smaller devices */
+        text-align: left; /* Align text to the left for readability */
     }
 
     .info-item:not(:last-child) {
         border-right: none;
-        border-bottom: 1px solid #506040;
-        /* Add horizontal line for mobile */
+        border-bottom: 1px solid #506040; /* Horizontal line for mobile */
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .info-item svg {
+        font-size: 28px; /* Slightly reduce icon size */
+        margin-bottom: 8px;
+    }
+
+    .info-item h4 {
+        font-size: 16px; /* Reduce heading size */
+    }
+
+    .info-item p {
+        font-size: 13px; /* Reduce text size */
     }
 }

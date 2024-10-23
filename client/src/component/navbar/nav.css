@@ -1,84 +1,87 @@
-/* Navbar styles */
+/* nav.css */
+
+/* Make the navbar full width */
 .navbar {
-  background-color: #3c4e2f;
+  width: 100%;
+  background-color: #333;
   color: #fff;
   padding: 10px;
 }
 
-
-.container {
+.navbar-container {
   display: flex;
-  justify-content: space-between; /* Ensure logo is on the left and links on the right */
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding:0 305px; /* Adjust padding as necessary */
 }
 
-/* Logo styles */
-.logo {
-  font-size: 24px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: left;
- 
- 
+/* Avatar styling */
+.navbar-avatar {
+  margin-right: 10px;
 }
 
-/* Navbar links */
-.nav-links {
+.avatar {
+  border-radius: 50%;
+}
+
+/* Search bar styling */
+.navbar-search {
   display: flex;
-  list-style: none;
+  flex-grow: 1; /* Make the search bar take available space */
+  align-items: center;
+  margin-right: 20px;
 }
 
-.nav-links li {
-  margin: 0 15px;
+.navbar-search input {
+  padding: 8px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* Cart icon styles */
-.cart-icon {
-  color: #fff;
-  font-size: 24px;
+.navbar-search button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
   cursor: pointer;
-  margin-left: 20px;
 }
 
-.cart-icon:hover {
-  color: #ffdf00; /* Change cart icon color on hover */
+/* Navbar actions (Messages and Connect buttons) */
+.navbar-actions {
+  display: flex;
+  align-items: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #333;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s ease;
-  }
+.message-btn, .connect-btn {
+  padding: 8px 12px;
+  margin-left: 10px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
 
-  .nav-links.active {
-    opacity: 1;
-    visibility: visible;
-  }
+.message-btn:hover, .connect-btn:hover {
+  background-color: #218838;
+}
 
-  .nav-links li {
-    margin: 20px 0;
-  }
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
 
-  .nav-toggle {
-    display: flex;
-  }
+/* Connected people list */
+.connected-list {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

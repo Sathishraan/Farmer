@@ -1,0 +1,76 @@
+/* Address form container styling */
+.address-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.complete-address-button {
+    background-color: #25a7f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.complete-address-button:hover {
+    background-color: #1d8fd3;
+}
+
+/* Popup message styling */
+.order-placed-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #25c059;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    text-align: center;
+}
+
+.order-placed-popup p {
+    font-size: 18px;
+    color: #25c059;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .address-container {
+        padding: 10px;
+    }
+
+    .address-container h2 {
+        font-size: 24px;
+    }
+
+    .address-container button {
+        font-size: 16px;
+    }
+}

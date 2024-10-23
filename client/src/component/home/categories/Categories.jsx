@@ -25,7 +25,10 @@ const categories = [
         name: 'Dried products',
         imageUrl: '/home/nuts.jpg',
         description: 'When nothing prevents our to we like best be.',
+
+
     },
+
 ];
 
 const Categories = () => {

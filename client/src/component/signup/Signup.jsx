@@ -4,31 +4,44 @@ import { Link, useNavigate } from 'react-router-dom';
 import './signup.css';
 
 const Signup = () => {
+
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setMessage('');
+
     axios.post('http://localhost:7007/auth/signup', { username, email, password })
       .then(res => {
-        console.log(res.data); // Inspect the response
         if (res.data.status) {
-          navigate('/login');
+          setMessage('Registered successfully!');
+          setMessageType('success');
+          setTimeout(() => {
+            setMessage('');
+            navigate('/login');
+          }, 2000);
         } else {
-          console.log('Signup failed');
+          setMessage(res.data.message || 'Signup failed. Please try again.');
+          setMessageType('error');
+          setTimeout(() => setMessage(''), 2000);
         }
       })
-      .catch(err => {
-        console.error(err);
+      .catch(() => {
+        setMessage('An error occurred. Please try again.');
+        setMessageType('error');
+        setTimeout(() => setMessage(''), 2000);
       });
   };
 
   return (
     <div className="signcontainer">
       <h2 className="signup-header">SIGNUP</h2>
+      {message && <div className={`message-box ${messageType}`}>{message}</div>}
       <form onSubmit={handleSubmit} className="signup-form">
         <div className="form-group">
           <label htmlFor="username" className="label">Username</label>
@@ -39,6 +52,7 @@ const Signup = () => {
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
             className="input-field"
+            required
           />
         </div>
         <div className="form-group">
@@ -50,6 +64,7 @@ const Signup = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             className="input-field"
+            required
           />
         </div>
         <div className="form-group">
@@ -61,6 +76,7 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             className="input-field"
+            required
           />
         </div>
         <button type="submit" className="submit-button">Submit</button>

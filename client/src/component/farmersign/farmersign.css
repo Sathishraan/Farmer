@@ -1,0 +1,118 @@
+/* Container for the signup form */
+.fsigncontainer {
+    background-color: #7dd093;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Signup header */
+.fsignup-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fmessage-box {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fmessage-box.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.fmessage-box.error {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+.fmessage-box p {
+    margin: 0;
+}
+
+
+
+
+/* Form container */
+.fsignup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Each group (label + input) */
+.fform-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.flabel {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+    display: block;
+}
+
+/* Input fields styling */
+.finput-field {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.finput-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button styling */
+.fsubmit-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.fsubmit-button:hover {
+    background-color: #0056b3;
+}
+
+.fsubmit-button:focus {
+    outline: none;
+}
+
+/* Login link paragraph */
+.flogin-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.flogin-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.flogin-link a:hover {
+    text-decoration: underline;
+}

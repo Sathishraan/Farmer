@@ -1,38 +1,32 @@
 /* General container styling */
-/* General container styling */
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   max-width: 1200px;
-  padding-top: 2880px;
+  padding-top: 2650px; /* Reduce padding for smaller devices */
   margin: 0 auto;
   width: 100%;
-  overflow-x: hidden; /* Allow horizontal overflow only if necessary */
-  overflow-y: visible; /* Allow content to overflow vertically */
-  height: auto; /* Ensure the height grows with content */
-  min-height: 100vh; /* Ensure the container takes at least full viewport height */
+  overflow-y: visible;
+  height: auto;
+  min-height: 100vh;
 }
 
-.bg{
+.bg {
   color: aliceblue;
-  padding:20px 20px;
-  
+  padding: 20px 20px;
   font-size: 50px;
-
 }
+
 /* Body and HTML */
 html, body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-y: auto; /* Allow vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scroll unless necessary */
   background-color: #3c4e2f;
 }
-
 
 /* Fullscreen Image */
 .fullscreen-image {
@@ -40,34 +34,35 @@ html, body {
   height: 80vh;
   object-fit: cover;
   z-index: 10;
-  position: absolute; /* Change this if the image needs to cover the full screen */
-  top: 0; /* Ensure it is positioned at the top */
-  left: 0; /* Ensure it starts from the left side */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
 /* Image Grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   width: 100%;
   margin: 20px auto;
-  padding-top: 0px; /* Align grid properly */
-  overflow-x: visible; /* Prevent horizontal overflow */
-  overflow-y: visible; /* Allow vertical overflow */
-  min-height: 100%; /* Ensure the grid container takes the height based on content */
+  padding-top: 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  min-height: 100%;
 }
 
 .grid-item-container {
   position: relative;
-  height: auto; /* Let the container resize based on content */
-  overflow: visible; /* Ensure content is not cut off */
+  height: auto;
+  overflow: visible;
 }
 
 .grid-item {
   width: 100%;
-  height: auto; /* Maintain the aspect ratio of the image */
-  object-fit: cover; /* Ensure the image covers the container */
-  border-radius: 10px; /* Optional: add rounded corners */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Buy Button styling */
@@ -85,7 +80,6 @@ html, body {
   transition: all 0.3s ease;
 }
 
-/* Hover Effect with Shadow */
 .buy-button:hover {
   background-color: #2bb532;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -104,7 +98,6 @@ html, body {
   padding: 20px 0;
 }
 
-/* Video Container */
 .video-container {
   position: relative;
   width: 100%;
@@ -116,7 +109,6 @@ html, body {
   padding: 20px 0;
 }
 
-/* Video Styling */
 .product-video {
   width: 100%;
   height: auto;
@@ -131,26 +123,45 @@ html, body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width: 767px) {
-  .fullscreen-image {
-    height: 80vh; /* Ensure the image still occupies significant space */
-  }
-}
 
 /* For larger desktops */
-@media (min-width: 1024px) {
+@media (min-width: 424px) {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* For small devices like mobile phones */
-@media (max-width: 767px) {
+/* Adjusting image size for small devices */
+@media (max-width: 424px) {
+  .fullscreen-image {
+    height: 50vh; /* Smaller height for mobile */
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    top: auto;
+  }
+
   .grid-container {
     grid-template-columns: 1fr;
   }
 
   .grid-item-container {
     height: auto;
+  }
+
+  .home-container {
+    padding-top: 2cqb; /* Reduce padding on smaller screens */
+  }
+}
+
+/* For very small devices like mobile phones */
+@media (max-width: 480px) {
+  .fullscreen-image {
+    max-width: 100%;
+    height: 40vh;
+  }
+
+  .home-container {
+    padding-top: 2080px; /* Further reduce padding for very small devices */
   }
 }

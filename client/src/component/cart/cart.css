@@ -1,0 +1,108 @@
+/* Cart List Styling */
+.cart-container {
+    padding: 20px;
+    background-color: #ddd2d2;
+    /* Light background color for contrast */
+}
+
+.main-conatiner {
+    display: flex;
+    padding: 20px;
+
+    .cart-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        max-height: 800px;
+        /* Adjust height as needed */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        overflow-x: hidden;
+        /* Hide horizontal overflow */
+    }
+
+    .cart-list-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid #f8f2f2;
+        font-weight: bold;
+    }
+
+    .cart-icon {
+        margin-right: 15px;
+        font-size: 24px;
+        color: #929892;
+    }
+
+    .cart-item-image {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+
+    .cart-item-details {
+        flex-grow: 1;
+    }
+
+    .cart-item-details h3 {
+        font-size: 20px;
+        margin: 0;
+        color: #c42c2c;
+    }
+
+    .cart-item-price {
+        font-size: 18px;
+        color: #25c059;
+        margin-left: auto;
+    }
+
+    .remove-cart-button {
+        margin-left: 20px;
+        background-color: #f44;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .remove-cart-button:hover {
+        background-color: #d33;
+    }
+
+    .buy-cart-button {
+        margin-left: 10px;
+        background-color: #25a7f5;
+        /* Blue button */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .buy-cart-button:hover {
+        background-color: #1d8fd3;
+        /* Darker blue on hover */
+    }
+
+    .back-to-home {
+
+        background-color: #25a7f5;
+        /* Blue button */
+        color: white;
+        border: none;
+        padding: 18px 25px;
+        cursor: pointer;
+        border-radius: 5px;
+
+
+    }
+
+    .back-to-home:hover {
+        background-color: #1d8fd3;
+        /* Darker blue on hover */
+    }

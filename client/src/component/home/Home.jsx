@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import Footer from '../footer/Footer';
 import Navbar from '../navbar/Navbar';
 import Categories from './categories/Categories';
 import './home.css';
@@ -22,16 +23,16 @@ const Home = () => {
         {/* Single large image container */}
         <div className="grid-item-container">
           <img src="/home/fruit.png" alt="Fruit" className="grid-item" />
-          
+
         </div>
         <Info />
-        <h1  className='bg'>TODAY'S SPECIAL OFFERS</h1>
+        <h1 className='bg'>TODAY'S SPECIAL OFFERS</h1>
         <p className='bg'>Don't miss it</p>
-        
+
 
         {/* Image Grid */}
         <div className="grid-container">
-         
+
           <div className="grid-item-container">
             <img src="/home/banana.png" alt="Banana" className="grid-item" />
             <button className="buy-button" onClick={handleBuyClick}>Buy</button>
@@ -76,8 +77,10 @@ const Home = () => {
         </div>
 
         {/* Product Component */}
-      
+
       </div>  <Product />
+      <Footer />
+     
     </div>
   );
 };
